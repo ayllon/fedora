@@ -1,5 +1,18 @@
 {
     "build": {
         "dockerfile": "./Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker"
+            ],
+            "settings": {
+                "files.eol": "\n",
+                "files.insertFinalNewline": true,
+                "editor.rulers": [120],
+                "redhat.telemetry.enabled": false
+            }
+        }
     }
 }
