@@ -3,7 +3,7 @@ FROM fedora:rawhide
 USER root
 
 RUN dnf upgrade -y
-RUN dnf install -y vim zsh fzf
+RUN dnf install -y vim zsh fzf vim-powerline
 RUN useradd aalvarez --shell /bin/zsh
 RUN usermod -a -G wheel aalvarez
 RUN echo "aalvarez ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/10-aalvarez
