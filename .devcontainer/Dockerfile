@@ -3,7 +3,7 @@ FROM fedora:rawhide
 USER root
 
 RUN dnf upgrade -y
-RUN dnf install -y vim zsh
+RUN dnf install -y vim zsh fzf
 RUN useradd aalvarez --shell /bin/zsh
 RUN usermod -a -G wheel aalvarez
 RUN echo "aalvarez ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/10-aalvarez
@@ -15,3 +15,4 @@ USER aalvarez
 RUN mkdir -p ~/.ssh/
 RUN touch ~/.ssh/authorized_keys
 RUN chmod 0600 ~/.ssh/authorized_keys
+RUN git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh

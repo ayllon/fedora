@@ -11,7 +11,9 @@
             "settings": {
                 "files.eol": "\n",
                 "files.insertFinalNewline": true,
-                "editor.rulers": [120],
+                "editor.rulers": [
+                    120
+                ],
                 "redhat.telemetry.enabled": false
             }
         }
